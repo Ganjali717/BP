@@ -8,7 +8,7 @@ namespace BasicExamples
 {
     public class ConditionalOperators
     {
-        public int EvenNumbersSum()
+        public int EvenNumbersAverageSum()
         {
             int[] numbers = new int[] { 2, 3, 4, 6 };
             int summary = 0, count = 0, average;
@@ -24,7 +24,7 @@ namespace BasicExamples
             average = summary / count;
             return average;
         }
-
+           
         public int FindLongest()
         {
             int[] numbersSecond = new int[5] { 12, 15, 68, 55, 55 };
@@ -52,5 +52,6 @@ namespace BasicExamples
             }
             return sum;
         }
+        
     }
 }
