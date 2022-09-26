@@ -24,7 +24,9 @@ namespace SimpleAPI.Models
 
     public enum IssueType
     {
-        Feature, Bug, Documentation
+        Feature, 
+        Bug, 
+        Documentation
     }
 
 }

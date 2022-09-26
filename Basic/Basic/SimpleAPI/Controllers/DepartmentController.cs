@@ -12,20 +12,30 @@ namespace SimpleAPI.Controllers
         public DepartmentController(AppDbContext context) => _context = context;
 
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult GetAllIssues()
         {
             var issues = _context.Issues.ToList();
-            if (issues == null) return BadRequest("404");
-            return Ok(issues);
+            return issues == null ? NotFound() : Ok(issues);
         }
 
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public IActionResult GetbyId(Guid id)
+        {
+            var issue = _context.Issues.Where(x=> x.Id == id).FirstOrDefault();
+            return issue == null ? NotFound() : Ok(issue);
+        }
+        
 
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         public IActionResult AddIssue(Issue issue)
         {
             if (issue == null) return BadRequest("404");
             _context.Issues.Add(issue);
-            return Ok();
+            _context.SaveChanges();
+            return CreatedAtAction(nameof(GetbyId), new {id = issue.Id}, issue);
         }
     }
 }
