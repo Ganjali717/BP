@@ -10,7 +10,7 @@ namespace SimpleAPI.Controllers
     {
         private readonly AppDbContext _context; 
         public DepartmentController(AppDbContext context) => _context = context;
-
+        
         [HttpGet]
         public IActionResult GetAllIssues()
         {
@@ -18,7 +18,7 @@ namespace SimpleAPI.Controllers
             return issues == null ? NotFound() : Ok(issues);
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         [ProducesResponseType(typeof(Issue), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetbyId(Guid id)
@@ -37,7 +37,7 @@ namespace SimpleAPI.Controllers
             return CreatedAtAction(nameof(GetbyId), new {id = issue.Id}, issue);
         }
 
-        [HttpGet]
+        [HttpGet("{title}")]
         [ProducesResponseType(typeof(Issue), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetbyTitle(string title)
