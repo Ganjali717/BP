@@ -19,9 +19,11 @@ namespace SimpleAPI.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(Issue), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetbyId(Guid id)
         {
-            var issue = _context.Issues.Where(x=> x.Id == id).FirstOrDefault();
+            Issue issue = _context.Issues.Where(x=> x.Id == id).FirstOrDefault();
             return issue == null ? NotFound() : Ok(issue);
         }
         
@@ -34,6 +36,32 @@ namespace SimpleAPI.Controllers
             _context.Issues.Add(issue);
             _context.SaveChanges();
             return CreatedAtAction(nameof(GetbyId), new {id = issue.Id}, issue);
+        }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(Issue), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult GetbyTitle(string title)
+        {
+            Issue issue = _context.Issues.Where(x => x.Title == title).FirstOrDefault();
+            return issue == null ? NotFound() : Ok(issue);
+        }
+
+        [HttpPut]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult UpdateIssue(Issue model)
+        {
+            var issue = _context.Issues.FirstOrDefault(x => x.Id == model.Id);
+            if (issue == null) return NotFound();
+            issue.Title = model.Title;
+            issue.Description = model.Description;
+            issue.Completed = model.Completed; 
+            issue.Created = model.Created;
+            issue.IssueType = model.IssueType;
+            issue.Priority = model.Priority;
+            _context.SaveChanges();
+            return Ok();
         }
     }
 }
