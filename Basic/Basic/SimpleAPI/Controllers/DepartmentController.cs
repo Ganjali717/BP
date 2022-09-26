@@ -12,7 +12,6 @@ namespace SimpleAPI.Controllers
         public DepartmentController(AppDbContext context) => _context = context;
 
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult GetAllIssues()
         {
             var issues = _context.Issues.ToList();
@@ -20,7 +19,6 @@ namespace SimpleAPI.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult GetbyId(Guid id)
         {
             var issue = _context.Issues.Where(x=> x.Id == id).FirstOrDefault();
