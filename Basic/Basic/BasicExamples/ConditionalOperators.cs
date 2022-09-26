@@ -8,6 +8,9 @@ namespace BasicExamples
 {
     public class ConditionalOperators
     {
+
+
+
         public int EvenNumbersAverageSum()
         {
             int[] numbers = new int[] { 2, 3, 4, 6 };
