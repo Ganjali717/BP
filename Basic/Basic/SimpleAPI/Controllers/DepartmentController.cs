@@ -26,7 +26,6 @@ namespace SimpleAPI.Controllers
             var issue = _context.Issues.FirstOrDefault(x => x.Id == id);
             return issue == null ? NotFound() : Ok(issue);
         }
-        
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
