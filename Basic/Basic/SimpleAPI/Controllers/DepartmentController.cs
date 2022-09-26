@@ -23,7 +23,7 @@ namespace SimpleAPI.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetbyId(Guid id)
         {
-            Issue issue = _context.Issues.Where(x=> x.Id == id).FirstOrDefault();
+            var issue = _context.Issues.FirstOrDefault(x => x.Id == id);
             return issue == null ? NotFound() : Ok(issue);
         }
         
@@ -43,7 +43,7 @@ namespace SimpleAPI.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetbyTitle(string title)
         {
-            Issue issue = _context.Issues.Where(x => x.Title == title).FirstOrDefault();
+            var issue = _context.Issues.FirstOrDefault(x => x.Title == title);
             return issue == null ? NotFound() : Ok(issue);
         }
 
