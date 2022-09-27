@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace BasicExamples
 {
+
+
+
     public class Asset
     {
         public string Name;
+        public virtual decimal Liability => 0; //virtual method
     }
     public class Stock : Asset // inherits from Asset
     {
@@ -17,5 +21,10 @@ namespace BasicExamples
     public class House : Asset // inherits from Asset
     {
         public decimal Mortgage;
+        public override decimal Liability => Mortgage;
+
     }
+
+
+
 }

@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\BP\\Basic\\Basic\\BasicExamples\\BasicExamples.csproj",
-      "projectName": "BasicExamples",
-      "projectPath": "C:\\Users\\User\\Desktop\\BP\\Basic\\Basic\\BasicExamples\\BasicExamples.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\BP\\Basic\\Basic\\BasicExamples\\Examples.csproj",
+      "projectName": "Examples",
+      "projectPath": "C:\\Users\\User\\Desktop\\BP\\Basic\\Basic\\BasicExamples\\Examples.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\Desktop\\BP\\Basic\\Basic\\BasicExamples\\obj\\",
       "projectStyle": "PackageReference",
