@@ -4,11 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicExamples
+namespace Examples
 {
-
-
-
     public class Asset
     {
         public string Name;
@@ -24,7 +21,5 @@ namespace BasicExamples
         public override decimal Liability => Mortgage;
 
     }
-
-
 
 }
