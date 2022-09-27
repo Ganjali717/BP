@@ -28,5 +28,24 @@ namespace Examples
             Console.Write(" and Azerbaijan\n");
         }
     }
+
+    class StockExchangeMonitor
+    {
+        public delegate void PriceChange(int price);
+
+        public PriceChange PriceChangeHandler { get; set; }
+
+        public void Start()
+        {
+            while (true)
+            {
+                int price = new Random().Next(1000);
+
+                PriceChangeHandler(price);
+
+                Thread.Sleep(2000);
+            }
+        }
+    }
    
 }

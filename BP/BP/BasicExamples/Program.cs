@@ -12,6 +12,7 @@ Console.WriteLine(mansion.Liability); // 250000
 Console.WriteLine(a.Liability);
 */
 
+/*
 NoParameters noParameters = new(ShowMessage); //Delegate
 
 noParameters(); //Singlecast
@@ -22,3 +23,12 @@ noParameters();//Multicast
 WithParameters withParameters = new(ShowMessage2);
 withParameters("Ganjali", "Imanov");
 Console.ReadLine();
+
+StockExchangeMonitor stockExchange = new StockExchangeMonitor();
+stockExchange.PriceChangeHandler = ShowPrice; 
+stockExchange.Start();
+void ShowPrice(int price)
+{
+    Console.WriteLine($"New price {price}");
+}
+*/
