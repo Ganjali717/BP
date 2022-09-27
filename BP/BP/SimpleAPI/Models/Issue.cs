@@ -6,9 +6,9 @@ namespace SimpleAPI.Models
     {
         public Guid Id { get; set; }
         [Required]
-        public string Title { get; set; }
+        public string? Title { get; set; }
         [Required]
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public Priority Priority { get; set; }
         public IssueType IssueType { get; set; }
         public DateTime Created { get; set; }
