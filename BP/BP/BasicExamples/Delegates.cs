@@ -11,9 +11,16 @@ namespace Examples
     {
         public delegate void NoParameters();
 
+        public delegate string WithParameters(string name, string surname);
+
         public  static void ShowMessage()
         {
             Console.WriteLine("Hello Baku");
+        }
+
+        public static string ShowMessage2(string name, string surname)
+        {
+            return  $"Fullname: {name} {surname}";
         }
 
     }

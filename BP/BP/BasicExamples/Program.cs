@@ -13,5 +13,7 @@ Console.WriteLine(a.Liability);
 */
 
 NoParameters noParameters = new(ShowMessage); //Delegate
+WithParameters withParameters = new(ShowMessage2);
 noParameters();
+withParameters("Ganjali", "Imanov");
 Console.ReadLine();
