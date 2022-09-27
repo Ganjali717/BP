@@ -13,7 +13,12 @@ Console.WriteLine(a.Liability);
 */
 
 NoParameters noParameters = new(ShowMessage); //Delegate
+
+noParameters(); //Singlecast
+
+noParameters += ShowMultiCasting;
+noParameters();//Multicast
+
 WithParameters withParameters = new(ShowMessage2);
-noParameters();
 withParameters("Ganjali", "Imanov");
 Console.ReadLine();

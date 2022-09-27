@@ -15,7 +15,7 @@ namespace Examples
 
         public  static void ShowMessage()
         {
-            Console.WriteLine("Hello Baku");
+            Console.Write("\nHello Baku");
         }
 
         public static string ShowMessage2(string name, string surname)
@@ -23,6 +23,10 @@ namespace Examples
             return  $"Fullname: {name} {surname}";
         }
 
+        public static void ShowMultiCasting()
+        {
+            Console.Write(" and Azerbaijan\n");
+        }
     }
    
 }
