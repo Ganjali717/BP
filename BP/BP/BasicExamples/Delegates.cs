@@ -32,7 +32,6 @@ namespace Examples
     class StockExchangeMonitor
     {
         public delegate void PriceChange(int price);
-
         public PriceChange PriceChangeHandler { get; set; }
 
         public void Start()
