@@ -1,18 +1,19 @@
 ﻿using Examples;
 using static Examples.Delegate;
 
-/*Stock msft = new Stock();
+#region TypeConversion
+Stock msft = new Stock();
 Asset a = msft; // Upcast
-Stock s = (Stock)a; // Downcast*/
+Stock s = (Stock)a; // Downcast
 
-/*
 House mansion = new House { Name = "McMansion", Mortgage = 250000 };
-Asset a = mansion;
+Asset b = mansion;
 Console.WriteLine(mansion.Liability); // 250000
-Console.WriteLine(a.Liability);
-*/
+Console.WriteLine(b.Liability);
+#endregion
 
-/*
+
+#region Delegate
 NoParameters noParameters = new(ShowMessage); //Delegate
 
 noParameters(); //Singlecast
@@ -31,4 +32,4 @@ void ShowPrice(int price)
 {
     Console.WriteLine($"New price {price}");
 }
-*/
+#endregion
