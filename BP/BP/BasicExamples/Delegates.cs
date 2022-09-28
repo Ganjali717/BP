@@ -46,5 +46,16 @@ namespace Examples
             }
         }
     }
-   
+
+    class PriceChange
+    {
+        public delegate void PriceChangedHandler(decimal oldPrice, decimal newPrice);
+        public class Broadcaster
+        {
+            // Event declaration
+            public event PriceChangedHandler PriceChanged;
+        }
+
+    }
+
 }
