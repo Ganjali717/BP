@@ -59,10 +59,10 @@ DateTime dt = new DateTime(2000, 2, 3,
 DateTime bakuTime = new DateTime(2022, 09, 28, 10, 05, 54);
 string dateFormat = bakuTime.ToString("dd.MM.yyyy"); // We can change format of date
 Console.WriteLine(dateFormat);*/
-#endregion
+#endregion 
 
 #region Parse
-string s = true.ToString(); // s = "True"
+/*string s = true.ToString(); // s = "True"
 bool b = bool.Parse(s); // b = true
 Console.WriteLine(b);
 
@@ -71,11 +71,20 @@ bool success = int.TryParse("123", out int i2);
 i1 = 4;
 i2 = 5;
 Console.WriteLine(failure);
-Console.WriteLine(success);
+Console.WriteLine(success);*/
 #endregion
 
 #region Format
-NumberFormatInfo f = new NumberFormatInfo();
+/*NumberFormatInfo f = new NumberFormatInfo();
 f.CurrencySymbol = "$$";
-Console.WriteLine(3.ToString("C", f));
+Console.WriteLine(3.ToString("C", f));*/
+#endregion
+
+#region Collections
+int[] array1 = { 1, 2 };
+int[] array2 = { 3, 4 };
+int[] array3 = array1;
+Console.WriteLine($"array1==array2 ? {array1 == array2}"); // The are not equal because they have different memory locations (FALSE)
+Console.WriteLine($"array2==array3 ? {array2 == array3}"); 
+Console.WriteLine($"array3==array1 ? {array3 == array1}"); 
 #endregion
