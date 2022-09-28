@@ -123,13 +123,18 @@ people.Reverse();
 var people2 = new List<string>() { "Eugene", "Tom", "Mike", "Sam", "Bob" };
 people2.Reverse(1, 3);*/
 
-
-string[] people3 = { "Tom", "Sam", "Bob" };
+/*string[] people3 = { "Tom", "Sam", "Bob" };
 IEnumerator peopleEnumerator = people3.GetEnumerator(); // get IEnumerator
 while (peopleEnumerator.MoveNext())   // until returned false
 {
     string item = (string)peopleEnumerator.Current; // get element at current position
     Console.WriteLine(item);
 }
-peopleEnumerator.Reset();
+peopleEnumerator.Reset();*/
+
+/*Week week = new Week(); //IEnumerable realizing 
+foreach (var day in week)
+{
+    Console.WriteLine(day);
+}*/
 #endregion
