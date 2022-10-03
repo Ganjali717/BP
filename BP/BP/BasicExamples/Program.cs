@@ -140,9 +140,8 @@ foreach (var day in week)
 #endregion
 
 #region LINQ
-
 string[] names = { "Ganjali", "Ali", "Abbas" };
-IEnumerable<string> filteredNames = names.Where(n => n.Length >= 4);
+IEnumerable<string> filteredNames = names.Where(n => n.Length >= 4).Select(x => x.ToUpper()).OrderBy(x => x.Length);
 foreach (string n in filteredNames)
     Console.WriteLine(n);
 #endregion
