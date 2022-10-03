@@ -9,8 +9,7 @@ namespace Examples
 {
     class Week : IEnumerable
     {
-        string[] days = { "Monday", "Tuesday", "Wednesday", "Thursday",
-            "Friday", "Saturday", "Sunday" };
+        string[] days = { "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday", "Sunday" };
         public IEnumerator GetEnumerator() => days.GetEnumerator();
     }
 }
