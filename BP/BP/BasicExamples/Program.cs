@@ -138,3 +138,11 @@ foreach (var day in week)
     Console.WriteLine(day);
 }*/
 #endregion
+
+#region LINQ
+
+string[] names = { "Ganjali", "Ali", "Abbas" };
+IEnumerable<string> filteredNames = names.Where(n => n.Length >= 4);
+foreach (string n in filteredNames)
+    Console.WriteLine(n);
+#endregion
