@@ -1,11 +1,11 @@
-﻿using System.Security.Cryptography;
+﻿using System.Globalization;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 
-/*
 Console.WriteLine("\r\nExists Certs Name and Location");
 Console.WriteLine("------ ----- -------------------------");
 
-foreach (StoreLocation storeLocation in (StoreLocation[])
+/*foreach (StoreLocation storeLocation in (StoreLocation[])
          Enum.GetValues(typeof(StoreLocation)))
 {
     foreach (StoreName storeName in (StoreName[])
@@ -27,18 +27,15 @@ foreach (StoreLocation storeLocation in (StoreLocation[])
         }
     }
     Console.WriteLine();
-}
-*/
+}*/
 
 
-X509Store store = new X509Store("My", StoreLocation.CurrentUser);
-store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
+X509Store store = new X509Store("My", StoreLocation.LocalMachine);
+store.Open(OpenFlags.ReadOnly);
 X509Certificate2Collection collection = (X509Certificate2Collection)store.Certificates;
-for (int i = 0; i < collection.Count; i++)
+foreach (X509Certificate2 x509 in collection)
 {
-    foreach (X509Extension extension in collection[i].Extensions)
-    {
-        Console.WriteLine(extension.Oid.FriendlyName + "(" + extension.Oid.Value + ")");
-    }
+    Console.WriteLine("certificate name: {0}", x509.Subject);
 }
 store.Close();
+

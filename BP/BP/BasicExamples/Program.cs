@@ -140,8 +140,37 @@ foreach (var day in week)
 #endregion
 
 #region LINQ
-string[] names = { "Ganjali", "Ali", "Abbas" };
+/*string[] names = { "Ganjali", "Ali", "Abbas" };
 IEnumerable<string> filteredNames = names.Where(n => n.Length >= 4).Select(x => x.ToUpper()).OrderBy(x => x.Length);
 foreach (string n in filteredNames)
-    Console.WriteLine(n);
+    Console.WriteLine(n);*/
+#endregion
+
+#region Disposal and Garbage Collection
+Test();
+
+void Test()
+{
+    Person? tom = null;
+    try
+    {
+        tom = new Person("Tom");
+    }
+    finally
+    {
+        tom?.Dispose();
+    }
+}
+
+public class Person : IDisposable
+{
+    public string Name { get; }
+    public Person(string name) => Name = name;
+
+    public void Dispose()
+    {
+        Console.WriteLine($"{Name} has been disposed");
+    }
+}
+
 #endregion
