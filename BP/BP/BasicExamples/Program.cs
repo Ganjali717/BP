@@ -184,7 +184,6 @@ Console.WriteLine(pc.NextValue());*/
 
 
 #region Process Class
-
 /*
 foreach (Process process in Process.GetProcesses())
 {
@@ -193,7 +192,7 @@ foreach (Process process in Process.GetProcesses())
 /*Process proc = Process.GetProcessesByName("devenv")[0];
 Console.WriteLine("ID: {0}", proc.Id);*/
 
-
+/*Process.Start("https://google.com");*/
 
 #endregion
 
