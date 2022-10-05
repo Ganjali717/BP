@@ -183,3 +183,17 @@ Console.WriteLine(pc.NextValue());*/
 #endregion
 
 
+#region Process Class
+
+/*
+foreach (Process process in Process.GetProcesses())
+{
+    Console.WriteLine("ID: {0} Name: {1} MemorySize: {2}", process.Id, process.ProcessName, process.PeakVirtualMemorySize64);
+}*/
+/*Process proc = Process.GetProcessesByName("devenv")[0];
+Console.WriteLine("ID: {0}", proc.Id);*/
+
+
+
+#endregion
+
