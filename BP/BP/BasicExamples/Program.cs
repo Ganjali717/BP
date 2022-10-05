@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Diagnostics;
 using Examples;
 using System.Globalization;
 using System.Text;
@@ -147,6 +148,7 @@ foreach (string n in filteredNames)
 #endregion
 
 #region Disposal and Garbage Collection
+/*
 Test();
 
 void Test()
@@ -172,5 +174,12 @@ public class Person : IDisposable
         Console.WriteLine($"{Name} has been disposed");
     }
 }
+*/
 
+/*string procName = Process.GetCurrentProcess().ProcessName;
+using PerformanceCounter pc = new PerformanceCounter
+    ("Process", "Private Bytes", procName);
+Console.WriteLine(pc.NextValue());*/
 #endregion
+
+

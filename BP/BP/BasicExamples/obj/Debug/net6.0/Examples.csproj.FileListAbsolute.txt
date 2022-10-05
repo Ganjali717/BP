@@ -13,3 +13,17 @@ C:\Users\User\Desktop\BP\BP\BP\BasicExamples\obj\Debug\net6.0\refint\Examples.dl
 C:\Users\User\Desktop\BP\BP\BP\BasicExamples\obj\Debug\net6.0\Examples.pdb
 C:\Users\User\Desktop\BP\BP\BP\BasicExamples\obj\Debug\net6.0\Examples.genruntimeconfig.cache
 C:\Users\User\Desktop\BP\BP\BP\BasicExamples\obj\Debug\net6.0\ref\Examples.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\User\Desktop\BP\BP\BP\BasicExamples\obj\Debug\net6.0\Examples.csproj.CopyComplete
