@@ -31,7 +31,12 @@ namespace BaseballGame
                     else if (ops[i] == d)
                     {
                         int dIndex = Array.IndexOf(ops, d);
-                        int lastElement = Array.IndexOf(ops, (dIndex - 1));
+                        int lastElement = 0;
+                        if (ops.Length == 1)
+                        { 
+                            lastElement = Array.IndexOf(ops, (dIndex - 1));
+                        }
+                       
                         int newElement = Convert.ToInt32(ops[lastElement]) * 2;
                         newOps = newOps.Concat(new string[] {newElement.ToString()}).ToArray(); 
                     }
