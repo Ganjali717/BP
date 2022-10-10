@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAPI", "SimpleAPI\Simp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeyStore", "KeyStore\KeyStore.csproj", "{E0124ABE-68E9-4228-8707-60FC03312284}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseballGame", "BaseballGame\BaseballGame.csproj", "{E2E93E00-E83B-4259-A503-0B67A15D338C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseballGame", "BaseballGame\BaseballGame.csproj", "{E2E93E00-E83B-4259-A503-0B67A15D338C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
