@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Diagnostics;
+using System.Drawing.Text;
 using Examples;
 using System.Globalization;
 using System.Text;
 using static Examples.Delegate;
+using Delegate = Examples.Delegate;
 
 #region TypeConversion
 /*Stock msft = new Stock();
@@ -34,9 +36,16 @@ void ShowPrice(int price)
     Console.WriteLine($"New price {price}");
 }*/
 
-Func<int, int, int> Addition = AddNumbers;
+/*Func<int, int, int> Addition = AddNumbers;
 int result = Addition(10,20);
-Console.WriteLine($"Addition = {result}");
+Console.WriteLine($"Addition = {result}");*/
+
+/*Action<int, int> Addition = delegate (int param1, int param2)
+{
+    result = param1 + param2;
+};
+Addition(10, 20);
+Console.WriteLine($"Addition = {result}");*/
 #endregion
 
 #region String and TextHandling
@@ -65,7 +74,7 @@ DateTime dt = new DateTime(2000, 2, 3,
 DateTime bakuTime = new DateTime(2022, 09, 28, 10, 05, 54);
 string dateFormat = bakuTime.ToString("dd.MM.yyyy"); // We can change format of date
 Console.WriteLine(dateFormat);*/
-#endregion 
+#endregion
 
 #region Parse
 /*string s = true.ToString(); // s = "True"

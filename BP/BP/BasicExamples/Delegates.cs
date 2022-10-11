@@ -12,7 +12,7 @@ namespace Examples
         public delegate void NoParameters();
 
         public delegate string WithParameters(string name, string surname);
-
+        public static int result;
         public  static void ShowMessage()
         {
             Console.Write("\nHello Baku");
