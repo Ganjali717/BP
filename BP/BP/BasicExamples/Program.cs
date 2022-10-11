@@ -33,6 +33,10 @@ void ShowPrice(int price)
 {
     Console.WriteLine($"New price {price}");
 }*/
+
+Func<int, int, int> Addition = AddNumbers;
+int result = Addition(10,20);
+Console.WriteLine($"Addition = {result}");
 #endregion
 
 #region String and TextHandling
@@ -181,7 +185,6 @@ using PerformanceCounter pc = new PerformanceCounter
     ("Process", "Private Bytes", procName);
 Console.WriteLine(pc.NextValue());*/
 #endregion
-
 
 #region Process Class
 /*

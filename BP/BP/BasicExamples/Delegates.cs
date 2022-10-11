@@ -27,6 +27,11 @@ namespace Examples
         {
             Console.Write(" and Azerbaijan\n");
         }
+
+        public static int AddNumbers(int param1, int param2)
+        {
+            return param1 + param2;
+        }
     }
 
     class StockExchangeMonitor
