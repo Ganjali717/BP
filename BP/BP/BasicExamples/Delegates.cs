@@ -32,6 +32,13 @@ namespace Examples
         {
             return param1 + param2;
         }
+        public static bool IsApple(string modelName)
+        {
+            if (modelName == "I Phone X")
+                return true;
+            else
+                return false;
+        }
     }
 
     class StockExchangeMonitor

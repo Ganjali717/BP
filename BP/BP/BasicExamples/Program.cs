@@ -46,6 +46,12 @@ Console.WriteLine($"Addition = {result}");*/
 };
 Addition(10, 20);
 Console.WriteLine($"Addition = {result}");*/
+
+/*
+Predicate<string> CheckIfApple = IsApple;
+bool result = IsApple("I Phone X");
+if (result)
+    Console.WriteLine("It's an IPhone");*/
 #endregion
 
 #region String and TextHandling
